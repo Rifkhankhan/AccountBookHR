@@ -1,0 +1,5 @@
+.container {
+	display: flex; /* Use flexbox for layout */
+	min-height: 87vh;
+	padding-top: 8.5vh;
+}

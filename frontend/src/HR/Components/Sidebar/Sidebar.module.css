@@ -1,0 +1,12 @@
+/* Sidebar.module.css */
+.sidebar {
+	width: 200px;
+	background-color: #ffffff;
+	color: #081e56 !important;
+	transition: width 0.3s ease;
+	min-height: max-content !important;
+	min-height: max-content !important;
+	font-weight: bold;
+	overflow: auto;
+	height: 100%; /* Set the height of the sidebar to 100% */
+}

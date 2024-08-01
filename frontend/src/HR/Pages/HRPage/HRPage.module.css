@@ -1,0 +1,63 @@
+/* HRPage.module.css */
+.container {
+	display: flex; /* Use flexbox for layout */
+	min-height: 87vh;
+	padding-top: 8.5vh;
+	position: relative;
+}
+.container > :first-child {
+	flex: 0 0 200px; /* Sidebar width */
+	transition: all 0.3s ease-in-out;
+	z-index: 10;
+}
+
+/* Style for the content area */
+.content {
+	flex: 1 !important; /* Fill remaining space */
+	min-height: 91vh;
+	transition: display 0.3s ease-in-out;
+}
+
+.collapsed > :first-child {
+	flex: 0;
+	display: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.collapsed > .content {
+	flex: 1 !important; /* Fill remaining space */
+}
+
+.toggleBtn {
+	position: absolute !important;
+
+	top: 10 !important;
+	left: 5px !important;
+
+	z-index: 10;
+}
+
+.toggleCollapsed {
+	left: 185px !important;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+
+	background-color: white;
+	box-shadow: 0 3px 5px black;
+	z-index: 10;
+}
+
+@media screen and (max-width: 900px) {
+	.sidebar {
+		position: absolute;
+		top: 10;
+		left: 0;
+		width: 200px;
+		z-index: 1;
+		height: calc(100% - 8.5vh); /* Set the height of the sidebar to 100% */
+	}
+	.content {
+		flex: 1;
+	}
+}
